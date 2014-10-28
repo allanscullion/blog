@@ -25,36 +25,44 @@ After digging around for a bit, I finally settled on [Pelican][pelican] - a stat
 
 If you can find your way around the Unix command line, you can be up and running in minutes using the following:
 
-    sudo pip install pelican
-    sudo pip install Markdown
-    pelican-quickstart
+```bash
+sudo pip install pelican
+sudo pip install Markdown
+pelican-quickstart
+```
 
 This will create the folder structure for your Pelican project:
 
-    yourproject/
-    ├── content
-    │   └── (pages)
-    ├── output
-    ├── develop_server.sh
-    ├── fabfile.py
-    ├── Makefile
-    ├── pelicanconf.py       # Main settings file
-    └── publishconf.py       # Settings to use when ready to publish
+```text
+yourproject/
+├── content
+│   └── (pages)
+├── output
+├── develop_server.sh
+├── fabfile.py
+├── Makefile
+├── pelicanconf.py       # Main settings file
+└── publishconf.py       # Settings to use when ready to publish
+```
 
 Creating content is easy. Simply create a markdown file in the `content` folder using the following metadata syntax at the top of the file:
 
-    Title: Static blogging with Pelican - Part 1
-    Date: 2014-10-27 18:02
-    Author: Allan Scullion
-    Category: Blogging
-    Tags: Blogging,Pelican,Python
-    Slug: pelican-1
+```text
+Title: Static blogging with Pelican - Part 1
+Date: 2014-10-27 18:02
+Author: Allan Scullion
+Category: Blogging
+Tags: Blogging,Pelican,Python
+Slug: pelican-1
 
-    Page content goes here
+Page content goes here
+```
 
 Save the file, then use the following command[^1]:
 
-    make clean && make html DEBUG=1 && make serve
+```bash
+make clean && make html DEBUG=1 && make serve
+```
 
 Open your browser to `http://localhost:8000` and behold your new creation.
 
