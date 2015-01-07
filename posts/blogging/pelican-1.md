@@ -25,11 +25,10 @@ After digging around for a bit, I finally settled on [Pelican][pelican] - a stat
 
 If you can find your way around the Unix command line, you can be up and running in minutes using the following:
 
-```bash
-sudo pip install pelican
-sudo pip install Markdown
-pelican-quickstart
-```
+    :::bash
+    sudo pip install pelican
+    sudo pip install Markdown
+    pelican-quickstart
 
 This will create the folder structure for your Pelican project:
 
