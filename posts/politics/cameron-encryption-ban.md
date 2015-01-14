@@ -4,6 +4,7 @@ Author: Allan Scullion
 Category: Politics
 Tags: Snooping, Security, Liberty
 Slug: cameron-encryption-ban
+Triggers: tweet
 
 It seems that every time we have a high profile terrorist attack, politicians, with alarming alacrity, seize on the opportunity to demand extra snooping powers. This used to be New Labour's domain, but now it's the turn of David Cameron. Our esteemed PM wants to allow our security services to [view the content of encrypted messaging services][indy_snoop]:
 
