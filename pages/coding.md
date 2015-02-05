@@ -10,7 +10,7 @@ A `Node.js` project that does two things:
 *	Scrapes hourly data from Weather Underground for a number of defined locations. Data is stored in MySQL
 *	Chart the resulting data on a web site using Highcharts
 
-You can find example output [here](http://staging.ascullion.com:3000)
+You can find example output [here](http://ascullion.com:3000)
 
 [Github Repository](https://github.com/allanscullion/weather)
 
