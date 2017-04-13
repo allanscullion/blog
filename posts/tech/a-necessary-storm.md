@@ -23,7 +23,7 @@ Apple have done this before. The [Snow Leopard][snow] (10.6) release of OSX was 
 
 The problem that Apple face now is compounded because their OS footprint is getting significantly bigger: Mac OSX, iOS, Apple TV and now Apple Watch. I buy and recommend a lot of these products on the basis that perceived quality. My kids went through university with Macbooks and iPhones and I can count the number of support issues I had to resolve on the fingers of one hand. Apple set that standard and it is all the more frustrating when they fail to meet it. I buy Apple at home so that I don't have to deal with same crap I have to put up with in work, supporting Windows systems.
 
-One of my favourite sub £100 gadgets is Apple TV. Every now and then it cannot find my iTunes content hosted on the Mac Pro upstairs - easily resolved with a reboot, but still bloody annoying. It will happily stream content via Airplay from an iPhone 4 or 5, but the same content from an iPhone 6 takes ages to stream. Whiny First World problems for sure, but hey, like I said, Apple set the bar.
+One of my favourite sub £100 gadgets is the Apple TV. Every now and then it cannot find my iTunes content hosted on the Mac Pro upstairs - easily resolved with a reboot, but still bloody annoying. It will happily stream content via Airplay from an iPhone 4 or 5, but the same content from an iPhone 6 takes ages to stream. Whiny First World problems for sure, but hey, like I said, Apple set the bar.
 
 It is time for Apple slow down a bit and repeat the Snow Leopard exercise across all of their current platforms. As [Gruber says][gruber]:
 
