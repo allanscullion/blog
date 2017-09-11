@@ -101,7 +101,9 @@ I have a bit of background in Linux system admin, so I chose to use `Cygwin` bas
 The following `bash` script: `stagedupdateremoval.sh` takes a generated package list file from phase one as a parameter, then uses `grep` to extract the list of “Staged” package names, and pipes that output to `sed` to create a Powershell script that can be run on the source machine to remove all of the Staged packages:
 
 	#!/bin/bash
-	cat $1 | grep -Pzo '(?<=^Package Identity \: )(.*)(?=\n^State : Staged$)' | sed 's/^/dism \/online \/remove-package \/packagename:/' > $1.remove.ps1
+	cat $1 | grep -Pzo '(?<=^Package Identity \: )(.*)(?=\n^State : Staged$)' | \
+		sed 's/^/dism \/online \/remove-package \/packagename:/' > \
+		$1.remove.ps1
 
 As we had collated all of the files from the affected machines in a shared folder, I used the following script to process them all in the one go:
 
