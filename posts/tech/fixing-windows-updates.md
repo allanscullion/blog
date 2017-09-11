@@ -5,7 +5,6 @@ Category: Tech
 Tags: Windows, Updates, Shavlik
 Slug: fixing-windows-updates
 
-# Fixing Windows Updates
 ![Seriously Microsoft... wtf!](/images/2400.jpg "Head in Hands")
 I have no idea what travesty I committed in a past life to deserve the pain I have recently experienced with Windows Updates[^1]. However, I do know that my punishment is to know way more about the Windows Update module than any sane IT Manager has the right to know.
 
