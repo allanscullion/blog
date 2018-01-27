@@ -5,4 +5,4 @@ Category: Blogging
 Tags: Blogging, Pelican
 Slug: pelican-2
 
-Watch this space
+Watch this space. More to come.
