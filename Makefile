@@ -6,6 +6,7 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
+STAGINGCONF=$(BASEDIR)/stagingconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 FTP_HOST=localhost
@@ -16,6 +17,8 @@ SSH_HOST=178.79.160.184
 SSH_PORT=22
 SSH_USER=root
 SSH_TARGET_DIR=/var/www/html/ascullion.com/public_html
+PUBLISH_TARGET_DIR=/var/www/html/ascullion.com/public_html
+STAGING_TARGET_DIR=/var/www/html/staging.ascullion.com/public_html
 
 S3_BUCKET=my_s3_bucket
 
@@ -86,6 +89,10 @@ publish:
 		git pull
 		$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
+staging:
+		git pull
+		$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(STAGINGCONF) $(PELICANOPTS)
+
 ssh_upload: publish
 		scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
@@ -93,7 +100,10 @@ rsync_upload: publish
 		rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
 
 rsync: publish
-		sudo rsync -rvzc --delete $(OUTPUTDIR)/ $(SSH_TARGET_DIR) --cvs-exclude
+		sudo rsync -rvzc --delete $(OUTPUTDIR)/ $(PUBLISH_TARGET_DIR) --cvs-exclude
+
+staging_rsync: staging
+		sudo rsync -rvzc --delete $(OUTPUTDIR)/ $(STAGING_TARGET_DIR) --cvs-exclude
 
 dropbox_upload: publish
 		cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
